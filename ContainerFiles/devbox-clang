@@ -1,6 +1,7 @@
 FROM ghcr.io/ublue-os/fedora-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
+  name=devbox-clang \
   usage="This image is meant to be used with the toolbox or distrobox command" \
   summary="Devbox for C/C++ workflows" \
   maintainer="lain@0x00.network"

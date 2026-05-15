@@ -8,12 +8,12 @@ devbox is a collection of container images to be used with distrobox/toolbox to 
 
 If you use distrobox:
 
-    distrobox create -i ghcr.io/xlaaaain/devbox-cpplang -n devbox-cpp
+    distrobox create -i ghcr.io/xlaaaain/devbox-cpplang -n devbox-clang
     distrobox enter devbox-cpp
     
 If you use toolbox:
 
-    toolbox create -i ghcr.io/xlaaaain/devbox-cpplain -c devbox-cpp
+    toolbox create -i ghcr.io/xlaaaain/devbox-cpplain -c devbox-clang
     toolbox enter devbox-cpp
 
 **NOTE:**
