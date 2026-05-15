@@ -4,17 +4,32 @@
 
 devbox is a collection of container images to be used with distrobox/toolbox to have a "batteries included" development environment for different kinds of workflows, using neovim as the editor, for use on immutable operating systems such as bazzite.
 
+## What images are available?
+
+Currently only `devbox-clang:latest` is available, which provides a development environment for C/C++, and neovim with the required utilities to use [LazyVim](https://github.com/LazyVim/LazyVim).
+
+The following are planned for the near future:
+- `devbox-golang` for go
+- `devbox-csharp` for csharp and dotnet
+- `devbox-rust` for rust
+- `devbox-godot` for developing games on the godot engine
+- `devbox-unity` for unity stuff
+- `devbox-webdev` for everything web developers need
+- potentially many more!
+
+All images will have a base set of utilities installed including neovim and the required utilities for LazyVim.
+
 ## Using the devbox images
 
 If you use distrobox:
 
-    distrobox create -i ghcr.io/xlaaaain/devbox-cpplang -n devbox-clang
-    distrobox enter devbox-cpp
+    distrobox create -i ghcr.io/xlaaaain/devbox-clang -n devbox-clang
+    distrobox enter devbox-clang
     
 If you use toolbox:
 
-    toolbox create -i ghcr.io/xlaaaain/devbox-cpplain -c devbox-clang
-    toolbox enter devbox-cpp
+    toolbox create -i ghcr.io/xlaaaain/devbox-clang -c devbox-clang
+    toolbox enter devbox-clang
 
 **NOTE:**
 
