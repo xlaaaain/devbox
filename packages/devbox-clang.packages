@@ -31,6 +31,8 @@ gdb
 cgdb
 llvm
 clang
+clang-tools-extra
+clang-analyzer
 lldb-dap
 glibc-devel.i686
 libgcc.i686
