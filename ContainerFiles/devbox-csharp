@@ -1,0 +1,16 @@
+FROM ghcr.io/ublue-os/fedora-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+  name=devbox-csharp \
+  usage="This image is meant to be used with the toolbox or distrobox command" \
+  summary="Devbox for C# workflows" \
+  maintainer="lain@0x00.network"
+
+# Copy setup scripts and package list
+COPY ../scripts/devbox-csharp.sh /
+COPY ../scripts/distrobox-shims.sh /
+COPY ../packages/devbox-csharp.packages /
+
+# Run the setup scripts
+RUN chmod +x devbox-csharp.sh distrobox-shims.sh && /devbox-csharp.sh
+RUN rm /devbox-csharp.sh /distrobox-shims.sh /devbox-csharp.packages

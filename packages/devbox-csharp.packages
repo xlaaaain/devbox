@@ -1,0 +1,14 @@
+neovim
+lazygit
+tree-sitter-cli
+curl
+wget
+fzf
+ripgrep
+fd-find
+zsh
+dotnet-sdk-9.0
+mono-devel
+aspnetcore-runtime-9.0
+dotnet-runtime-9.0
+
