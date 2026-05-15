@@ -1,0 +1,15 @@
+FROM ghcr.io/ublue-os/fedora-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+  usage="This image is meant to be used with the toolbox or distrobox command" \
+  summary="Devbox for C/C++ workflows" \
+  maintainer="lain@0x00.network"
+
+# Copy setup scripts and package list
+COPY ../scripts/devbox-clang.sh /
+COPY ../scripts/distrobox-shims.sh /
+COPY ../packages/devbox-clang.packages /
+
+# Run the setup scripts
+RUN chmod +x devbox-clang.sh distrobox-shims.sh && /devbox-clang.sh
+RUN rm /devbox-clang.sh /distrobox-shims.sh /devbox-clang.packages
