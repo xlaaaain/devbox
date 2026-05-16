@@ -19,8 +19,6 @@ The following are planned for the near future:
 - `devbox-cuda` for CUDA workflows
 - `devbox-golang` for go
 - `devbox-godot` for developing games on the godot engine
-- `devbox-unity` for unity stuff
-- `devbox-unityvrc` for working with VRChat
 - `devbox-webdev` for everything web developers need
 - potentially many more!
 
