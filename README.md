@@ -6,14 +6,21 @@ devbox is a collection of container images to be used with distrobox/toolbox to 
 
 ## What images are available?
 
-Currently only `devbox-clang:latest` is available, which provides a development environment for C/C++, and neovim with the required utilities to use [LazyVim](https://github.com/LazyVim/LazyVim).
+Currently available:
+
+- `devbox-clang` C/C++
+- `devbox-rust` Rust
+- `devbox-csharp` C#
+
+All images have neovim with the required utilities to use [LazyVim](https://github.com/LazyVim/LazyVim).
 
 The following are planned for the near future:
+
+- `devbox-cuda` for CUDA workflows
 - `devbox-golang` for go
-- `devbox-csharp` for csharp and dotnet
-- `devbox-rust` for rust
 - `devbox-godot` for developing games on the godot engine
 - `devbox-unity` for unity stuff
+- `devbox-unityvrc` for working with VRChat
 - `devbox-webdev` for everything web developers need
 - potentially many more!
 
@@ -25,6 +32,12 @@ If you use distrobox:
 
     distrobox create -i ghcr.io/xlaaaain/devbox-clang -n devbox-clang
     distrobox enter devbox-clang
+
+If you need nvidia gpu support in the container:
+
+    distrobox create -i ghcr.io/xlaaaain/devbox-clang --nvidia -n devbox-clang
+    distrobox enter devbox-clang
+
     
 If you use toolbox:
 
