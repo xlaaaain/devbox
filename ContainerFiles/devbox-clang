@@ -14,4 +14,4 @@ COPY ../packages/devbox-default.packages /
 
 # Run the setup scripts
 RUN chmod +x devbox-clang.sh distrobox-shims.sh && /devbox-clang.sh
-RUN rm /devbox-clang.sh /distrobox-shims.sh /devbox-clang.packages
+RUN rm /devbox-clang.sh /distrobox-shims.sh /devbox-clang.packages /devbox-default.packages

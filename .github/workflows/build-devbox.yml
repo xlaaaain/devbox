@@ -29,7 +29,8 @@ jobs:
       matrix:
         containerfile:
           - devbox-clang
-        #- devbox-csharp
+          - devbox-rust
+          - devbox-csharp
     steps:
       # Clone code to runner
       - name: Checkout

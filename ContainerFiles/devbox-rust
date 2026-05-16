@@ -1,17 +1,17 @@
 FROM ghcr.io/ublue-os/fedora-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
-  name=devbox-csharp \
+  name=devbox-rust \
   usage="This image is meant to be used with the toolbox or distrobox command" \
-  summary="Devbox for C# workflows" \
+  summary="Devbox for rust development workflows" \
   maintainer="lain@0x00.network"
 
 # Copy setup scripts and package list
-COPY ../scripts/devbox-csharp.sh /
+COPY ../scripts/devbox-rust.sh /
 COPY ../scripts/distrobox-shims.sh /
-COPY ../packages/devbox-csharp.packages /
+COPY ../packages/devbox-rust.packages /
 COPY ../packages/devbox-default.packages /
 
 # Run the setup scripts
-RUN chmod +x devbox-csharp.sh distrobox-shims.sh && /devbox-csharp.sh
-RUN rm /devbox-csharp.sh /distrobox-shims.sh /devbox-csharp.packages /devbox-default.packages
+RUN chmod +x devbox-rust.sh distrobox-shims.sh && /devbox-rust.sh
+RUN rm /devbox-rust.sh /distrobox-shims.sh /devbox-rust.packages /devbox-default.packages
