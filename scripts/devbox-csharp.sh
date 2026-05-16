@@ -7,4 +7,5 @@
 dnf update -y
 dnf copr enable dejan/lazygit -y
 dnf group install development-tools -y
+grep -v '^#' ./devbox-default.packages | xargs dnf install -y --skip-unavailable
 grep -v '^#' ./devbox-csharp.packages | xargs dnf install -y --skip-unavailable

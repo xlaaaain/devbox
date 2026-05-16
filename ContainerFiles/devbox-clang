@@ -10,6 +10,7 @@ LABEL com.github.containers.toolbox="true" \
 COPY ../scripts/devbox-clang.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/devbox-clang.packages /
+COPY ../packages/devbox-default.packages /
 
 # Run the setup scripts
 RUN chmod +x devbox-clang.sh distrobox-shims.sh && /devbox-clang.sh
